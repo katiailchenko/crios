@@ -1,0 +1,29 @@
+header.header
+  div.container
+    div.row
+      div.header__item.cell
+        div.block-menu
+          a.menu-btn(data-role="menu-btn" href="#")
+            span
+          nav.menu-nav(data-role="menu")
+            +menu-link({title: 'Home'})
+            +menu-link({title: 'About'})
+            +menu-link({title: 'Service'})
+            +menu-link({title: 'Contact'})
+      div.header__item.header__item_center.cell
+        div.block-logo
+          img(src="img/logo.png", alt="CRIOS")
+      div.header__item.header__item_right.cell
+        div.block-search
+          form.search-input(data-role="search" action="#" method="POST")
+            input(type="text")
+            button.icon-search(type='submit')
+          a.search-btn(data-role="search-btn" href='#')
+            span.icon-search
+            span.icon-cancel
+    h1.cell.title Simple PSD template with cool stuff
+div.header-img
+  p.cell.subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  div.header-img__button
+    a.button(href="#") explore template
+
