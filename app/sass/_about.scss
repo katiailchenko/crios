@@ -11,27 +11,6 @@
     @include cell-width(50%);
   }
 
-  &__img {
-    position: relative;
-    min-height: 560px;
-  
-    img {
-      position: absolute;
-      object-fit: cover;
-      top: 0;
-      height: 100%;
-      width: 50vw;
-
-      &.right {
-        left: 0;
-      }
-
-      &.left {
-        right: 0;
-      }
-    }
-  }
-
   &__info {
     display: flex;
     justify-content: center;
@@ -43,3 +22,51 @@
   width: 75%;
 }
 
+
+.about-img {
+  position: relative;
+  min-height: 560px;
+
+  &__photos {
+    position: relative;
+    height: 100%;
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      height: 100%;
+      width: 50vw;
+      opacity: 0;
+      transition: opacity 1s;
+
+      &.showed {
+        opacity: 1;
+      }
+    
+      &.right {
+        left: 0;
+      }
+    
+      &.left {
+        right: 0;
+      }
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 50vw;
+    text-align: center;
+
+    span {
+      font-size: 50px;
+      color: rgba(#fff, .5);
+      text-shadow: 0 0 30px rgba($c-main, .8);
+      cursor: pointer;
+      margin-right: 50px;
+    }
+  }
+}

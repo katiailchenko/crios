@@ -1,20 +1,27 @@
 section#about.about
   div.container
     div.row
-      div.about__item.about__img
-        img.left(src="img/photo_1.jpg" alt="alt")
+      div.about__item.about-img
+        div.about-img__photos
+          img.left.showed(src="img/photo_1.jpg" alt="alt")
+          img.left(src="img/photo_2.jpg" alt="alt")
+          img.left(src="img/photo_3.jpg" alt="alt")
+          img.left(src="img/photo_4.jpg" alt="alt")
+          img.left(src="img/photo_5.jpg" alt="alt")
+        div.about-img__buttons
+          span.prev.icon-left-open-big
+          span.next.icon-right-open-big
       div.about__item.about__info
         div.about-info
           h2.title Lorem ipsum dolor
           p.subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             | Suspendisse vel leo efficitur, venenatis est ut, tincidunt nibh.
             | Suspendisse lobortis lectus vel imperdiet ullamcorper.
-    div.row
       div.about__item.about__info
         div.about-info
           h2.title Lorem ipsum dolor
           p.subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             | Suspendisse vel leo efficitur, venenatis est ut, tincidunt nibh.
             | Suspendisse lobortis lectus vel imperdiet ullamcorper.
-      div.about__item.about__img
+      div.about__item.about-img
         img.right(src="img/photo_2.jpg" alt="alt")

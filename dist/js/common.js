@@ -28,3 +28,28 @@ $(document).on('click', function(e) {
     toggle('[data-role*="search"]', false);
   }
 })
+
+var btn_prev = document.querySelector('.about-img__buttons .prev');
+var btn_next = document.querySelector('.about-img__buttons .next');
+var images = document.querySelectorAll('.about-img__photos img');
+var i = 0;
+
+btn_prev.onclick = function() {
+  images[i].classList.remove('showed')
+  i--;
+  if(i<0) {
+    i = images.length - 1;
+  }
+
+  images[i].classList.add('showed')
+}
+
+btn_next.onclick = function() {
+  images[i].classList.remove('showed')
+  i++;
+  if(i>=images.length) {
+    i = 0;
+  }
+
+  images[i].classList.add('showed')
+}
