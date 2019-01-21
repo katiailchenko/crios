@@ -1,0 +1,45 @@
+.about {
+  position: relative;
+  background-color: #f7f8fb;
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &__item {
+    @include cell-width(50%);
+  }
+
+  &__img {
+    position: relative;
+    min-height: 560px;
+  
+    img {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      height: 100%;
+      width: 50vw;
+
+      &.right {
+        left: 0;
+      }
+
+      &.left {
+        right: 0;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.about-info {
+  width: 75%;
+}
+

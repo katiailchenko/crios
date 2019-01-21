@@ -6,10 +6,10 @@ header.header
           a.menu-btn(data-role="menu-btn" href="#")
             span
           nav.menu-nav(data-role="menu")
-            +menu-link({title: 'Home'})
-            +menu-link({title: 'About'})
-            +menu-link({title: 'Service'})
-            +menu-link({title: 'Contact'})
+            +menu-link({title: 'Home', link: '#home'})
+            +menu-link({title: 'About', link: '#about'})
+            +menu-link({title: 'Service', link: '#service'})
+            +menu-link({title: 'Contact', link: '#contact'})
       div.header__item.header__item_center.cell
         div.block-logo
           img(src="img/logo.png", alt="CRIOS")
@@ -25,5 +25,5 @@ header.header
 div.header-img
   p.cell.subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   div.header-img__button
-    a.button(href="#") explore template
+    +button({title: 'explore template'})
 

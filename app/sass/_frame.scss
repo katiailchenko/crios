@@ -44,6 +44,14 @@ a {
   font-size: 48px;
   text-align: center;
   padding-bottom: $grid-gap;
+
+  &_blue {
+    color: $c-main;
+  }
+
+  &_red {
+    color: #fe3254;
+  }
 }
 
 .subtitle {
@@ -60,7 +68,7 @@ a {
   text-transform: uppercase;
   color: $c-main;
   font-size: 14px;
-  box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 30px rgba($c-main, .2);
   transition: color .4s, background-color .4s;
 
   &:hover {

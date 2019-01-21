@@ -1,0 +1,41 @@
+.service {
+  .title {
+    margin-top: 80px;
+  }
+}
+
+.advantage {
+  margin-top: 85px;
+  margin-bottom: 85px;
+
+  &__item {
+    @include cell-width(25%);
+  }
+
+  &__button {
+    text-align: center;
+    margin-bottom: 120px;
+  }
+}
+
+.advantage-item {
+  &__img {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 35px;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 2em;
+    padding: 0 50px;
+  }
+}

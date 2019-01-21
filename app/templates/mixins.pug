@@ -1,3 +1,15 @@
 mixin menu-link(props)
-  - var {href = '#', title} = props
-  a.menu-nav__link(href=href)= title
+  - var {title, link} = props
+  a.menu-nav__link(href=link)= title
+
+mixin button(props)
+  - var {href='#', title} = props
+  a.button(href=href)= title
+
+mixin advantage-item(props)
+  - var {src, alt='alt', title, text} = props
+  div.advantage__item.advantage-item.cell
+    div.advantage-item__img
+      img(src=src alt=alt)
+    h2.advantage-item__title= title
+    p.advantage-item__text= text
