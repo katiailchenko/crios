@@ -1,6 +1,9 @@
 .service {
+  background-color: #fff;
+  padding-bottom: 120px;
+
   .title {
-    margin-top: 80px;
+    padding-top: 80px;
   }
 }
 
@@ -14,7 +17,6 @@
 
   &__button {
     text-align: center;
-    margin-bottom: 120px;
   }
 }
 

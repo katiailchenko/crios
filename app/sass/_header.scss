@@ -1,5 +1,6 @@
 .header {
   background-color: #f3f4f6;
+  
   .row {
     margin-bottom: 160px;
   }
@@ -8,6 +9,7 @@
 
     &_center {
       text-align: center;
+      position: relative;
     }
 
     &_right {
@@ -19,14 +21,14 @@
 .block-logo {
   height: 415px;
   width: 415px;
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: 0 0 100px rgba($c-main, .1);
   border-radius: 50%;
   top: 0;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translateY(-50%)  translateX(-50%);
   background-color: #fff;
   position: absolute;
+  margin: 0 auto;
 
 
   img {

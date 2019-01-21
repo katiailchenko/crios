@@ -1,10 +1,10 @@
 .mobile {
   position: relative;
+  background-color: #fff;
 
   &-decoration {
     img {
       position: absolute;
-      z-index: -1;
     }
 
     .top-img {
@@ -21,6 +21,7 @@
   .row {
     padding-top: 200px;
   }
+
   &__item {
     @include cell-width(50%);
     display: flex;
@@ -28,6 +29,7 @@
     align-items: center;
     min-height: 600px;
     margin-bottom: 200px;
+    z-index: 1;
   }
 }
 

@@ -181,21 +181,22 @@ a {
   .header__item {
     width: calc(33.333% - 15px*2); }
     .header__item_center {
-      text-align: center; }
+      text-align: center;
+      position: relative; }
     .header__item_right {
       text-align: right; }
 
 .block-logo {
   height: 415px;
   width: 415px;
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: 0 0 100px rgba(67, 169, 255, 0.1);
   border-radius: 50%;
   top: 0;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
   background-color: #fff;
-  position: absolute; }
+  position: absolute;
+  margin: 0 auto; }
   .block-logo img {
     position: absolute;
     bottom: 0;
@@ -384,8 +385,11 @@ a {
     text-align: center;
     padding-top: 85px; }
 
-.service .title {
-  margin-top: 80px; }
+.service {
+  background-color: #fff;
+  padding-bottom: 120px; }
+  .service .title {
+    padding-top: 80px; }
 
 .advantage {
   margin-top: 85px;
@@ -393,8 +397,7 @@ a {
   .advantage__item {
     width: calc(25% - 15px*2); }
   .advantage__button {
-    text-align: center;
-    margin-bottom: 120px; }
+    text-align: center; }
 
 .advantage-item__img {
   text-align: center;
@@ -443,10 +446,10 @@ a {
   width: 75%; }
 
 .mobile {
-  position: relative; }
+  position: relative;
+  background-color: #fff; }
   .mobile-decoration img {
-    position: absolute;
-    z-index: -1; }
+    position: absolute; }
   .mobile-decoration .top-img {
     top: 0;
     left: 0; }
@@ -461,7 +464,8 @@ a {
     justify-content: center;
     align-items: center;
     min-height: 600px;
-    margin-bottom: 200px; }
+    margin-bottom: 200px;
+    z-index: 1; }
 
 .mobile-item_left {
   justify-content: flex-start; }
@@ -524,19 +528,25 @@ a {
   color: #000;
   margin-bottom: 10px; }
 
-.footer .row {
-  justify-content: center;
-  padding-top: 130px;
-  padding-bottom: 100px; }
-
-.footer__button {
-  text-align: center;
-  margin-top: 100px; }
+.footer {
+  background-color: #fff;
+  margin-bottom: 100vh; }
+  .footer .row {
+    justify-content: center;
+    padding-top: 130px;
+    padding-bottom: 100px; }
+  .footer__button {
+    text-align: center;
+    margin-top: 100px; }
 
 .footer-image {
   background-image: url(../img/bg-footer.jpg);
   background-size: cover;
   background-position: right;
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  top: 0;
   height: 100vh; }
 
 /*# sourceMappingURL=main.css.map */
