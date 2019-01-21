@@ -486,7 +486,8 @@ a {
     text-align: left; }
 
 .team {
-  background-color: #f7f8fb; }
+  background-color: #f7f8fb;
+  overflow: hidden; }
   .team__item {
     width: calc(50% - 15px*2);
     z-index: 1; }

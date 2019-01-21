@@ -1,5 +1,6 @@
 .team {
   background-color: #f7f8fb;
+  overflow: hidden;
 
   &__item {
     @include cell-width(50%);
