@@ -8,7 +8,7 @@
   }
 
   &__item {
-    @include cell-width(50%);
+    width: 50%;
   }
 
   &__info {
@@ -56,17 +56,19 @@
 
   &__buttons {
     position: absolute;
-    bottom: 10px;
+    bottom: 50%;
+    transform: translateY(50%);
     right: 0;
     width: 50vw;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
 
     span {
       font-size: 50px;
-      color: rgba(#fff, .5);
-      text-shadow: 0 0 30px rgba($c-main, .8);
+      color: #fff;
       cursor: pointer;
-      margin-right: 50px;
+      padding: 20px;
     }
   }
 }
