@@ -9,6 +9,11 @@
 
   &__item {
     width: 50%;
+
+    @include if-smaller-than(960px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
   }
 
   &__info {
@@ -21,7 +26,6 @@
 .about-info {
   width: 75%;
 }
-
 
 .about-img {
   position: relative;
@@ -40,7 +44,15 @@
       opacity: 0;
       transition: opacity 1s;
 
+      @include if-smaller-than(960px) {
+        width: 100%;
+      }
+
       &.showed {
+        opacity: 1;
+      }
+
+      &.showed_n {
         opacity: 1;
       }
     
@@ -64,11 +76,20 @@
     display: flex;
     justify-content: space-between;
 
+    @include if-smaller-than(960px) {
+      width: 100%;
+    }
+
     span {
       font-size: 50px;
       color: #fff;
       cursor: pointer;
       padding: 20px;
+
+      @include if-smaller-than(500px) {
+        font-size: 40px;
+        padding: 0
+      }
     }
   }
 }

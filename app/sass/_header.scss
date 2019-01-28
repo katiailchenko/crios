@@ -3,13 +3,27 @@
   
   .row {
     margin-bottom: 160px;
+
+    @include if-smaller-than(500px) {
+      margin-bottom: 60px;
+    }
   }
   &__item {
     @include cell-width(33.333%);
+    @include if-smaller-than(1200px) {
+      @include cell-width(50%);
+    }
+
+    @include if-smaller-than(960px) {
+      @include cell-width(100%);
+    }
 
     &_center {
       text-align: center;
       position: relative;
+      @include if-smaller-than(1200px) {
+        order: 2;
+      }
     }
 
     &_right {
@@ -30,6 +44,17 @@
   position: absolute;
   margin: 0 auto;
 
+  @include if-smaller-than(1200px) {
+    background-color: transparent;
+    box-shadow: none;
+    height: 100%;
+    padding-top: 40%;
+    transform: translateY(0)  translateX(0);
+  }
+
+  @include if-smaller-than(960px) {
+    display: none;
+  }
 
   img {
     position: absolute;
@@ -61,6 +86,11 @@
   transform: scaleX(0) translateX(-50%);
   opacity: 0;
 
+  @include if-smaller-than(500px) {
+    width: 100vw;
+    
+  }
+
   &__link {
     display: inline-block;
     text-decoration: none;
@@ -70,6 +100,10 @@
     margin-right: 20px;
     border-bottom-color: transparent;
     transition: color .4s;
+
+    @include if-smaller-than(500px) {
+      font-size: 10px;
+    }
 
     .menu-nav_active & {
       color: #fff;
@@ -165,6 +199,12 @@
   border-top-right-radius: 60px;
   border-bottom-right-radius: 60px;
   overflow: hidden;
+
+  @include if-smaller-than(960px) {
+    justify-content: flex-start;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
 }
 
 .search-btn {
@@ -182,6 +222,10 @@
   border: 1px solid rgba($c-main, .2);
   color: #222;
   position: relative;
+
+  @include if-smaller-than(960px) {
+    order: -1;
+  }
 
     .icon-search {
       position: relative;
@@ -201,6 +245,10 @@
     border-color: $c-main;
     border-left-color: #fff;
     color: #fff;
+
+    @include if-smaller-than(960px) {
+      border-right-color: #fff;
+    }
 
       .icon-search {
         opacity: 0;
@@ -234,6 +282,20 @@
   opacity: 0;
   transition: transform .4s, opacity .4s, background-color .4s;
 
+  @include if-smaller-than(960px) {
+    margin-left: -50px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    transform-origin: left center;
+    transform: scaleX(0) translateX(-50%);
+  }
+
+  @include if-smaller-than(500px) {
+    width: 100vw;
+    padding-right: 150px;
+    position: relative;
+  }
+
   &#{$active} {
     transform: scaleX(1) translateX(0);
     opacity: 1;
@@ -247,6 +309,15 @@
     border-color: transparent;
     padding-left: 10px;
     color: $c-main;
+
+    @include if-smaller-than(960px) {
+      margin-left: 40px;
+    }
+
+    @include if-smaller-than(500px) {
+      width: 100%;
+    }
+
   }
 
   button {
@@ -260,6 +331,16 @@
     font-size: 16px;
     cursor: pointer;
     color: #fff;
+
+    @include if-smaller-than(960px) {
+      margin-right: 0;
+    }
+
+    @include if-smaller-than(500px) {
+      position: absolute;
+      top: 14px;
+      right: 40px;
+    }
   }
 }
 

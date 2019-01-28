@@ -13,6 +13,15 @@
 
   &__item {
     @include cell-width(25%);
+
+    @include if-smaller-than(1200px) {
+      @include cell-width(50%);
+      margin-bottom: 30px;
+    }
+
+    @include if-smaller-than(1200px) {
+      @include cell-width(1000%);
+    }
   }
 
   &__button {

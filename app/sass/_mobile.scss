@@ -5,6 +5,7 @@
   &-decoration {
     img {
       position: absolute;
+
     }
 
     .top-img {
@@ -25,11 +26,22 @@
   &__item {
     @include cell-width(50%);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    min-height: 600px;
     margin-bottom: 200px;
     z-index: 1;
+
+    @include if-smaller-than(960px) {
+      @include cell-width(100%);
+      margin-bottom: 50px;
+    }
+
+    &:last-child {
+      @include if-smaller-than(960px) {
+        margin-bottom: 200px;
+      }
+    }
   }
 }
 
@@ -37,15 +49,34 @@
 
   &_left {
     justify-content: flex-start;
+
+    @include if-smaller-than(1200px) {
+      justify-content: center;
+    }
   }
 
   &_right {
     justify-content: flex-end;
+
+    @include if-smaller-than(1200px) {
+      justify-content: center;
+    }
   }
   
   &__img {
     width: 50%;
     box-shadow: 0 0 100px rgba($c-main, .2);
+    position: relative;
+    padding-top: 80%;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     &_img-top {
       align-items: flex-start;
@@ -58,6 +89,10 @@
     .title,
     .subtitle {
       text-align: left;
+
+      @include if-smaller-than(1200px) {
+        text-align: center;
+      }
     }
   }
 }

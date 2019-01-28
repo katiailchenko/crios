@@ -52,6 +52,10 @@ a {
   &_red {
     color: #fe3254;
   }
+
+  @include if-smaller-than(500px) {
+    font-size: 30px;
+  }
 }
 
 .subtitle {
